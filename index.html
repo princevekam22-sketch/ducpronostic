@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUC Pronostics - Landing Page</title>
+
+    <style>
+        /* Reset mobile-friendly */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0c0c0c;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER HORIZONTAL --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 20px;
+            text-align: left;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo {
+            width: 70px;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .header-text h1 {
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+        }
+
+        .header-text .subtitle {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            background: #ffb800;
+            color: #000;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            background: #ffc93c;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .header-btn {
+                align-self: stretch;
+                text-align: center;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 25px;
+            text-align: center;
+        }
+
+        .features, .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #141414;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            text-align: left;
+        }
+
+        @media (min-width: 768px) {
+            .features, .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .subtitle { font-size: 1.2rem; }
+        }
+
+        /* ⭐ FOOTER */
+        footer {
+            background: #111;
+            padding: 35px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            color: #ffb800;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-social img {
+            width: 40px;
+            height: 40px;
+            transition: 0.3s;
+        }
+
+        .footer-social img:hover {
+            transform: scale(1.12);
+        }
+
+        footer p {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* ⭐ BOUTON FLOTTANT CONTACT */
+        .contact-floating {
+            position: fixed;
+            bottom: 25px;
+            right: 22px;
+            z-index: 999;
+        }
+
+        .contact-btn {
+            background: #ffb800;
+            color: #000;
+            border: none;
+            padding: 16px 18px;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 184, 0, 0.3);
+            transition: 0.25s;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1);
+            background: #ffc93c;
+        }
+
+        .contact-menu {
+            display: none;
+            position: absolute;
+            bottom: 65px;
+            right: 0;
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 12px 0;
+            width: 150px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .contact-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-menu a:hover {
+            background: #222;
+            color: #ffb800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ⭐ HEADER HORIZONTAL -->
+    <header>
+        <div class="header-left">
+            <img 
+                class="logo"
+                src="assets/1762703695633.jpg"
+                alt="Logo DUC Pronostics"
+            />
+
+            <div class="header-text">
+                <h1>DUC PRONOSTICS</h1>
+                <p class="subtitle">Excellence • Discipline • Résultats</p>
+            </div>
+        </div>
+	
+
+        <a href="https://discord.gg/cxMS3t84AT" class="btn header-btn">Rejoindre la communauté</a>
+    </header>
+	<!-- ⭐ SECTION HERO -->
+<section class="hero">
+    <div class="card hero-card">
+        <h2>Rejoins la Communauté des Parieurs Gagnants</h2>
+        <p class="lead">
+            Analyses premium quotidiennes, méthode de gestion de bankroll éprouvée,
+            formations exclusives et communauté structurée — rejoins DUC pour
+            transformer ta manière de parier.
+        </p>
+    </div>
+</section>
+
+    <!-- SECTION POURQUOI -->
+    <section>
+        <h2>Pourquoi nous rejoindre ?</h2>
+        <div class="features">
+            <div class="card">
+                <h3>🎯 Analyses expertes</h3>
+                <p>Plus de 7 ans d’expérience et des résultats transparents, pronostics basés sur statistiques et expérience..</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Gestion de bankroll</h3>
+                <p>Stratégies claires pour protéger et faire croître ton capital.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Communauté active</h3>
+                <p>Une équipe dédiée, méthodes testées. Une communauté sérieuse orientée résultats,structuré et professionnel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <a href="https://discord.gg/cxMS3t84AT" class="btn">Accéder maintenant</a>
+    </section>
+
+    <!-- SECTION AVIS -->
+    <section>
+        <h2>Avis des membres</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>⭐ Jonathan M.</h3>
+                <p>“Depuis que j’ai rejoint DUC, ma bankroll progresse enfin de manière stable.”</p>
+            </div>
+            <div class="card">
+                <h3>⭐ Karim B.</h3>
+                <p>“Transparence, méthode et discipline : le combo parfait.”</p>
+            </div>
+            <div class="card">
+                <h3>⭐ Samuel T.</h3>
+                <p>“La communauté m’a donné une vraie structure dans mes paris.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section>
+        <h2>FAQ</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>📌 Comment rejoindre ?</h3>
+                <p>Clique sur un des boutons et suis les instructions.</p>
+            </div>
+            <div class="card">
+                <h3>📌 Etre experts ?</h3>
+                <p>Non, c’est une communauté qui accueil tout type de parieurs.</p>
+            </div>
+            <div class="card">
+                <h3>📌 Sports couverts ?</h3>
+                <p>Football principalement, + opportunités d’autres sports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⭐ FOOTER -->
+    <footer>
+        <p class="footer-title">Nous suivre</p>
+
+        <div class="footer-social">
+
+            <a href="https://www.tiktok.com/@duc.pronostics?_r=1&_t=ZM-91tU0M8SdFQ" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok">
+            </a>
+
+            <a href="https://www.instagram.com/duc_pronos?utm_source=qr&igsh=NjFkZGZuNDJlZ2hv" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.snapchat.com/add/duc20252185?share_id=EsrN7Pfagbk&locale=fr-FR" target="_blank">
+    <img  src="assets/snapchat.png"
+    alt="Logo Snapchat"
+    class="social-icon">
+</a>
+
+<a href="https://web.facebook.com/profile.php?id=61578558855897" target="_blank">
+    <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/512px-Facebook_icon.svg.png"
+        alt="Facebook"
+        style="width:40px; height:40px;"
+    >
+</a>
+
+
+
+        </div>
+
+        <p>© 2025 DUC Pronostics — Tous droits réservés.</p>
+    </footer>
+
+    <!-- ⭐ BOUTON FLOTTANT CONTACT -->
+    <div class="contact-floating">
+        <button class="contact-btn" onclick="toggleContactMenu()">📬</button>
+
+        <div id="contact-menu" class="contact-menu">
+            <a href="https://wa.me/243974071510" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:duc.pronostic@gmail.com?subject=Demande%20d'information&body=Bonjour%20DUC%2C%0A">
+  📧 Email
+</a>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleContactMenu() {
+            const menu = document.getElementById("contact-menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
